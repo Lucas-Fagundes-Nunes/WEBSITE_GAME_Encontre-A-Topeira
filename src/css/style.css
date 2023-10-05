@@ -1,6 +1,12 @@
 * {
     margin: 0;
     padding: 0;
+
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
 }
 
 body {
@@ -8,6 +14,12 @@ body {
     text-align: center;
     background-image: url("../images/mario-bg.jpg");
     background-size: cover;
+}
+
+h1, h2 {
+    color: #fff;
+    text-shadow: 2px 2px 2px rgba(0,0,0, 0.6);
+    text-transform: uppercase;
 }
 
 #board {
@@ -21,7 +33,7 @@ body {
     background-image: url("../images/soil.png");
     background-size: cover;
     border-radius: 25px;
-    border: 3px solid white;
+    border: 3px solid #fff;
 }
 
 #board div {
@@ -34,4 +46,22 @@ body {
 #board div img {
     width: 100px;
     height: 100px;
+}
+
+#div-score {
+    height: 80px;
+}
+
+.div-score {
+    position: relative;
+    animation: score 0.5s infinite alternate-reverse ease-in-out;
+}
+
+@keyframes score {
+    from {
+        font-size: 12pt;
+    }
+    to {
+        font-size: 14pt;
+    }
 }
