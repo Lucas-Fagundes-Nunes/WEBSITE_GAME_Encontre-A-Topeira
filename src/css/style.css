@@ -23,3 +23,15 @@ body {
     border-radius: 25px;
     border: 3px solid white;
 }
+
+#board div {
+    width: 180px;
+    height: 180px;
+    background-image: url("../images/pipe.png");
+    background-size: cover;
+}
+
+#board div img {
+    width: 100px;
+    height: 100px;
+}
