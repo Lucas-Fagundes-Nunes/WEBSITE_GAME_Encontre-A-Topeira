@@ -17,6 +17,12 @@ window.onload = function () {
     setGame();
 }
 
+function playAudio(nameAudio) {
+    let audio = new Audio(`./src/audios/${nameAudio}`);
+    audio.volume = 0.2;
+    audio.play();
+}
+
 function setPlant() {
     if (states.results.gameOver) {
         return;
@@ -72,9 +78,11 @@ function selectTile() {
     } 
 
     if (this == states.currMoleTile) {
+        playAudio('hit.m4a');
         states.results.score ++
         states.view.score.innerHTML = states.results.score.toString();
     } else if (this == states.currPlantTile) {
+        playAudio('gameover.mp3');
         states.view.textScore.innerText = "GAME OVER";
         states.view.score.innerHTML = states.results.score.toString();
         states.results.gameOver = true;
